@@ -1,0 +1,79 @@
+/* Container styling */
+.popup-container {
+    width: 320px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    font-family: 'Arial', sans-serif;
+    border-radius: 8px;
+  }
+  
+  /* Header section */
+  .popup-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  /* Buttons */
+  .button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Text input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  
+  /* Analysis Results */
+  .analysis-result {
+    background-color: #e7f4e4;
+    padding: 8px;
+    border: 1px solid #b0d7a8;
+    border-radius: 4px;
+    color: #2f6627;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  
+  /* Error message */
+  .error-message {
+    background-color: #fbeaea;
+    padding: 8px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #a94442;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+  
+  /* Footer Section */
+  .popup-footer {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 16px;
+  }
+  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClarifAI Content Verifier</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Content Verifier</h1>
+
+    <div class="section">
+      <h2>Analyze Content</h2>
+
+      <label for="contentType">Select Content Type:</label>
+      <select id="contentType">
+        <option value="link">Link</option>
+        <option value="text">Text</option>
+        <option value="image">Image</option>
+      </select>
+
+      <div id="inputSection">
+        <input type="url" id="linkInput" placeholder="Enter URL to verify" style="display: none;">
+        <textarea id="textInput" placeholder="Paste text to verify" style="display: none;"></textarea>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+      </div>
+
+      <button id="analyzeButton">Analyze</button>
+    </div>
+
+    <div id="resultSection">
+      <h2>Analysis Result</h2>
+      <div id="trustScore"></div>
+      <div id="interpretation"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact-Checker Extension</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup-container">
+        <h1>Fact-Checker</h1>
+
+        <!-- Text Input Section -->
+        <div class="input-section">
+            <h2>Text Fact-Check</h2>
+            <textarea id="text-input" placeholder="Enter text for fact-checking..."></textarea>
+            <button id="check-text-btn">Check Text</button>
+            <div id="text-result" class="result"></div>
+        </div>
+
+        <!-- Link Input Section -->
+        <div class="input-section">
+            <h2>Link Fact-Check</h2>
+            <input type="url" id="link-input" placeholder="Enter a URL to check..." />
+            <button id="check-link-btn">Check Link</button>
+            <div id="link-result" class="result"></div>
+        </div>
+
+        <!-- Image Input Section -->
+        <div class="input-section">
+            <h2>Image Fact-Check</h2>
+            <input type="file" id="image-input" accept="image/*" />
+            <button id="check-image-btn">Check Image</button>
+            <div id="image-result" class="result"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

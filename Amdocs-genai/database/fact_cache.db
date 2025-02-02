@@ -1,0 +1,43 @@
+import sqlite3
+
+# Establish a connection to SQLite DB (it will create the file if it doesn't exist)
+conn = sqlite3.connect('fact_cache.db')
+cursor = conn.cursor()
+
+# Create tables for links, texts, and images cache
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS links_cache (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        url TEXT NOT NULL,
+        trust_score INTEGER NOT NULL,
+        fact_data TEXT,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(url)
+    );
+''')
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS texts_cache (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        text TEXT NOT NULL,
+        trust_score INTEGER NOT NULL,
+        fact_data TEXT,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(text)
+    );
+''')
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS images_cache (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        image_metadata TEXT NOT NULL,
+        trust_score INTEGER NOT NULL,
+        fact_data TEXT,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(image_metadata)
+    );
+''')
+
+# Commit changes and close the connection
+conn.commit()
+conn.close()
